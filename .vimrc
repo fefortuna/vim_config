@@ -28,3 +28,14 @@ let g:onedark_color_overrides = {
 \ "purple": { "gui": "#C678DF", "cterm": "170", "cterm16": "5" }
 \}
 colorscheme onedark
+
+" make things like ctrl-backspace and shift-arrow selection work
+behave mswin
+"Map Ctrl-Backspace to delete the previous word in insert mode.
+:imap  <C-W>
+
+
+" NerdCommenter bindings
+nmap <C-_>   <Plug>NERDCommenterToggle
+vmap <C-_>   <Plug>NERDCommenterToggle<CR>gv
+
