@@ -1,0 +1,6 @@
+[submodule "bundle/delimitMate"]
+	path = bundle/delimitMate
+	url = https://github.com/Raimondi/delimitMate.git
+[submodule "bundle/sensible"]
+	path = bundle/sensible
+	url = https://tpope.io/vim/sensible.git
