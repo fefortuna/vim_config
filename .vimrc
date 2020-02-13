@@ -34,7 +34,14 @@ map i <Up>
 map j <Left>
 map k <Down>
 noremap h i
-
+" bindings for ijkl split navigation
+nmap <silent> <C-i>; :wincmd k<CR>
+nmap <silent> <C-j>; :wincmd h<CR>
+nmap <silent> <C-k>; :wincmd j<CR>
+nmap <silent> <C-l>; :wincmd l<CR>
+" open new splits to the right, and on the bottom
+set splitright
+set splitbelow
 
 
 " Enable mouse scroll
@@ -46,6 +53,11 @@ set ttimeoutlen=50
 " NerdCommenter bindings
 nmap <C-_>   <Plug>NERDCommenterToggle
 vmap <C-_>   <Plug>NERDCommenterToggle<CR>gv
+
+" move between buffers
+set hidden
+nnoremap <C-D> :bnext<CR>
+nnoremap <C-A> :bprev<CR>
 
 " allow backspace in normal mode
 nnoremap <BS> X
