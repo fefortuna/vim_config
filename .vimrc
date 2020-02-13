@@ -29,13 +29,24 @@ let g:onedark_color_overrides = {
 \}
 colorscheme onedark
 
-" make things like ctrl-backspace and shift-arrow selection work
-behave mswin
-"Map Ctrl-Backspace to delete the previous word in insert mode.
-:imap  <C-W>
+"remap h to insert and use ijkl for inverse T cursor movement
+map i <Up>
+map j <Left>
+map k <Down>
+noremap h i
 
+
+
+" Enable mouse scroll
+set mouse=a
+
+" set timeout length faster
+set ttimeoutlen=50
 
 " NerdCommenter bindings
 nmap <C-_>   <Plug>NERDCommenterToggle
 vmap <C-_>   <Plug>NERDCommenterToggle<CR>gv
+
+" allow backspace in normal mode
+nnoremap <BS> X
 

@@ -4,3 +4,16 @@
 [submodule "bundle/sensible"]
 	path = bundle/sensible
 	url = https://tpope.io/vim/sensible.git
+[submodule "bundle/nerdcommenter"]
+	path = bundle/nerdcommenter
+	url = https://github.com/preservim/nerdcommenter.git
+[submodule "bundle/onedark.vim"]
+	path = bundle/onedark.vim
+	url = https://github.com/joshdick/onedark.vim
+
+[submodule "bundle/vim-deus"]
+	path = bundle/vim-deus
+	url = https://github.com/ajmwagar/vim-deus.git
+[submodule "bundle/undotree"]
+	path = bundle/undotree
+	url = https://github.com/mbbill/undotree
