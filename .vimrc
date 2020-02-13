@@ -18,6 +18,10 @@ set splitbelow
 set pastetoggle=<F3>
 set number
 
+"indentation settings
+set ts=2
+set expandtab
+
 " COLOR SCHEME
 "Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
 "If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
@@ -45,17 +49,15 @@ colorscheme onedark
 " KEY MAPPINGS
 "
 "remap h to insert and use ijkl for inverse T cursor movement
-map i <Up>
-map j <Left>
-map k <Down>
-noremap h i
+"map i <Up>
+"map j <Left>
+"map k <Down>
+"noremap h i
 " bindings for ijkl split navigation
-nmap <silent> <C-i>; :wincmd k<CR>
-nmap <silent> <C-j>; :wincmd h<CR>
-nmap <silent> <C-k>; :wincmd j<CR>
-nmap <silent> <C-l>; :wincmd l<CR>
-
-
+"nmap <silent> <C-i>; :wincmd k<CR>
+"nmap <silent> <C-j>; :wincmd h<CR>
+"nmap <silent> <C-k>; :wincmd j<CR>
+"nmap <silent> <C-l>; :wincmd l<CR>
 
 " set timeout length faster
 set ttimeoutlen=50
