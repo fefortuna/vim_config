@@ -1,13 +1,24 @@
 " start pathogen plugin manager
 execute pathogen#infect()
 
-" basic settings
+"
+"BASIC SETTINGS
+"
 syntax on
 filetype plugin indent on
 
+" Enable mouse scroll
+set mouse=a
+
+" open new splits to the right, and on the bottom
+set splitright
+set splitbelow
+
 " diables some annoying stuff when pasting into vim
 set pastetoggle=<F3>
+set number
 
+" COLOR SCHEME
 "Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
 "If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
 "(see < http://sunaku.github.io/tmux-24bit-color.html#usage > for more information.)
@@ -29,6 +40,10 @@ let g:onedark_color_overrides = {
 \}
 colorscheme onedark
 
+
+
+" KEY MAPPINGS
+"
 "remap h to insert and use ijkl for inverse T cursor movement
 map i <Up>
 map j <Left>
@@ -39,13 +54,8 @@ nmap <silent> <C-i>; :wincmd k<CR>
 nmap <silent> <C-j>; :wincmd h<CR>
 nmap <silent> <C-k>; :wincmd j<CR>
 nmap <silent> <C-l>; :wincmd l<CR>
-" open new splits to the right, and on the bottom
-set splitright
-set splitbelow
 
 
-" Enable mouse scroll
-set mouse=a
 
 " set timeout length faster
 set ttimeoutlen=50
@@ -62,3 +72,10 @@ nnoremap <C-A> :bprev<CR>
 " allow backspace in normal mode
 nnoremap <BS> X
 
+" use ; instead of :
+map ; :
+noremap ;; ;
+
+" make currently selected tab blue, and non-selected tabs grey
+hi link BufTabLineCurrent PmenuSel
+hi link BufTabLineActive TabLineSel
