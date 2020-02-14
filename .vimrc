@@ -20,7 +20,11 @@ set number
 
 "indentation settings
 set ts=2
+set shiftwidth=2
 set expandtab
+
+" toggle cursorline when entering/leaving insert mode
+:autocmd InsertEnter,InsertLeave * set cul!
 
 " COLOR SCHEME
 "Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
@@ -58,6 +62,23 @@ colorscheme onedark
 "nmap <silent> <C-j>; :wincmd h<CR>
 "nmap <silent> <C-k>; :wincmd j<CR>
 "nmap <silent> <C-l>; :wincmd l<CR>
+":map <Home> ^
+":imap <Home> <Esc>^i
+":map <Home><Home> <Home>
+":imap <Home><Home> <Home>
+"
+map [1;5D <C-Left>
+map [1;5C <C-Right>
+
+function ExtendedHome()
+    let column = col('.')
+    normal! ^
+    if column == col('.')
+        normal! 0
+    endif
+endfunction
+noremap <silent> <Home> :call ExtendedHome()<CR>
+inoremap <silent> <Home> <C-O>:call ExtendedHome()<CR>
 
 " set timeout length faster
 set ttimeoutlen=50
@@ -75,8 +96,8 @@ nnoremap <C-A> :bprev<CR>
 nnoremap <BS> X
 
 " use ; instead of :
-map ; :
-noremap ;; ;
+"map ; :
+"noremap ;; ;
 
 " make currently selected tab blue, and non-selected tabs grey
 hi link BufTabLineCurrent PmenuSel
