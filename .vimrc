@@ -47,7 +47,9 @@ let g:onedark_color_overrides = {
 \ "purple": { "gui": "#C678DF", "cterm": "170", "cterm16": "5" }
 \}
 colorscheme onedark
-
+let g:lightline = {
+      \ 'colorscheme': 'one',
+      \}
 
 
 " KEY MAPPINGS
