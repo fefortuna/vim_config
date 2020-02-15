@@ -1,14 +1,22 @@
 # Instructions
 
-1. Clone
+1\. Clone 
 
 ```
+cd ~/
 git clone bitbucket.org/mondO/vim.git
 
 ```
 
-2. Run setup.sh
-3. Rename cloned repository to ~/.vim
+2\. Run setup.sh
+```
+./vim/setup.sh
+```
+
+3\. Rename cloned repository to ~/.vim
+```
+mv ~/vim ~/.vim
+```
 
 You may also need to update to vim8- color scheme doesn't work correctly in vim7 for some reason.
 
