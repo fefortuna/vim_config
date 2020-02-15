@@ -1,3 +1,4 @@
+set clipboard=exclude:.*
 " start pathogen plugin manager
 execute pathogen#infect()
 

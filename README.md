@@ -1,6 +1,12 @@
 # Instructions
 
 1. Clone
+
+```
+git clone bitbucket.org/mondO/vim.git
+
+```
+
 2. Run setup.sh
 3. Rename cloned repository to ~/.vim
 
