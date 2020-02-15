@@ -70,8 +70,13 @@ let g:lightline = {
 ":map <Home><Home> <Home>
 ":imap <Home><Home> <Home>
 "
-map [1;5D <C-Left>
-map [1;5C <C-Right>
+"map [1;5D <C-Left>
+"map [1;5C <C-Right>
+
+inoremap <Up> <Esc>gk<I>
+inoremap <Down> <Esc>gj<I>
+nnoremap <Up> gk
+nnoremap <Down> gj
 
 function ExtendedHome()
     let column = col('.')
