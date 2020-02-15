@@ -20,6 +20,34 @@ mv ~/vim ~/.vim
 
 You may also need to update to vim8- color scheme doesn't work correctly in vim7 for some reason.
 
+1\. Clone vim from the link [here](https://superuser.com/questions/162560/how-to-install-vim-on-linux-when-i-dont-have-root-permissions)
+
+```
+cd ~/
+git clone https://github.com/vim/vim.git
+```
+
+2\. Configure vim to install to `~/.local` or a directory of your choice, then make and install
+
+```
+cd ~/vim
+mkdir -p ~/.local
+./configure --prefix=$HOME/.local && make && make install
+```
+
+3\. Make a simlink to ~/.local/bin/vim in ~/bin (creating `~/bin` if it doesn't already exist)
+```
+cd ~/
+mkdir -p ~/bin
+ln -sf ~/.local/bin/vim ~/bin/vim
+```
+
+4\. Finally, ensure that `~/bin/` is in your path by adding this to your `~/.bashrc` if it's not already there:
+
+```
+export PATH=$HOME/bin/:$PATH
+```
+
 Instructions for building/installing vim from source without sudo [here](https://superuser.com/questions/162560/how-to-install-vim-on-linux-when-i-dont-have-root-permissions)
 
 official vim website [here](https://www.vim.org/git.php)
