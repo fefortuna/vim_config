@@ -56,15 +56,12 @@ let g:lightline = {
 " KEY MAPPINGS
 "
 "remap h to insert and use ijkl for inverse T cursor movement
-"map i <Up>
-"map j <Left>
-"map k <Down>
-"noremap h i
 " bindings for ijkl split navigation
-"nmap <silent> <C-i>; :wincmd k<CR>
-"nmap <silent> <C-j>; :wincmd h<CR>
-"nmap <silent> <C-k>; :wincmd j<CR>
-"nmap <silent> <C-l>; :wincmd l<CR>
+let mapleader = "\<Space>" 
+nmap <silent> <leader>h :wincmd h<CR>
+nmap <silent> <leader>j :wincmd j<CR>
+nmap <silent> <leader>k :wincmd k<CR>
+nmap <silent> <leader>l :wincmd l<CR>
 ":map <Home> ^
 ":imap <Home> <Esc>^i
 ":map <Home><Home> <Home>
