@@ -54,21 +54,16 @@ let g:lightline = {
 
 
 " KEY MAPPINGS
-"
-"remap h to insert and use ijkl for inverse T cursor movement
-" bindings for ijkl split navigation
+" space + hjkl for window navigation
 let mapleader = "\<Space>" 
 nmap <silent> <leader>h :wincmd h<CR>
 nmap <silent> <leader>j :wincmd j<CR>
 nmap <silent> <leader>k :wincmd k<CR>
 nmap <silent> <leader>l :wincmd l<CR>
-":map <Home> ^
-":imap <Home> <Esc>^i
-":map <Home><Home> <Home>
-":imap <Home><Home> <Home>
-"
-"map [1;5D <C-Left>
-"map [1;5C <C-Right>
+
+
+
+nmap <silent> <leader>/ <Plug>NERDCommenterToggle
 
 inoremap <Up> <Esc>gk<I>
 inoremap <Down> <Esc>gj<I>
