@@ -61,12 +61,11 @@ nmap <silent> <leader>j :wincmd j<CR>
 nmap <silent> <leader>k :wincmd k<CR>
 nmap <silent> <leader>l :wincmd l<CR>
 
-
-
 nmap <silent> <leader>/ <Plug>NERDCommenterToggle
+vmap <silent> <leader>/ <Plug>NERDCommenterToggle
 
-inoremap <Up> <Esc>gk<I>
-inoremap <Down> <Esc>gj<I>
+"inoremap <Up> <Esc>gk<I>
+"inoremap <Down> <Esc>gj<I>
 nnoremap <Up> gk
 nnoremap <Down> gj
 
@@ -79,6 +78,7 @@ function ExtendedHome()
 endfunction
 noremap <silent> <Home> :call ExtendedHome()<CR>
 inoremap <silent> <Home> <C-O>:call ExtendedHome()<CR>
+noremap <End> g_
 
 " set timeout length faster
 set ttimeoutlen=50
