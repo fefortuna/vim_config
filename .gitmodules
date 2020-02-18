@@ -40,3 +40,6 @@
 [submodule "bundle/vim-eunuch"]
 	path = bundle/vim-eunuch
 	url = https://github.com/tpope/vim-eunuch
+[submodule "bundle/vim-systemverilog"]
+	path = bundle/vim-systemverilog
+	url = https://github.com/cazador481/vim-systemverilog
