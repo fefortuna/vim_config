@@ -16,11 +16,11 @@ let loaded_verilog_emacsauto = 1
 " map \a, \d pair to Add and Delete functions, assuming \ is the leader
 " alternatively, map C-A, C-D to Add and Delete functions
 if !hasmapto('<Plug>VerilogEmacsAutoAdd')
-   map <unique> <Leader>a <Plug>VerilogEmacsAutoAdd
+   map <unique> <silent> <Leader>a <Plug>VerilogEmacsAutoAdd
    "map <unique> <C-A> <Plug>VerilogEmacsAutoAdd
 endif
 if !hasmapto('<Plug>VerilogEmacsAutoDelete')
-   map <unique> <Leader>d <Plug>VerilogEmacsAutoDelete
+   map <unique> <silent> <Leader>d <Plug>VerilogEmacsAutoDelete
    "map <unique> <C-D> <Plug>VerilogEmacsAutoDelete
 endif
 
@@ -47,7 +47,7 @@ function s:Add()
    " a tmp file is need 'cause emacs doesn't support the stdin to stdout flow
    " maybe add /tmp to the temporary filename
    w! %.emacsautotmp
-   !emacs -batch -l ~/elisp/verilog-mode.el %.emacsautotmp -f verilog-batch-auto
+   !emacs -batch -l ~/.vim/elisp/verilog-mode.el %.emacsautotmp -f verilog-batch-auto
    %!cat %.emacsautotmp 
    if &expandtab
       retab
@@ -65,7 +65,7 @@ function s:Delete()
    " a tmp file is need 'cause emacs doesn't support the stdin to stdout flow
    " maybe add /tmp to the temporary filename
    w! %.emacsautotmp
-   !emacs -batch -l ~/elisp/verilog-mode.el %.emacsautotmp -f verilog-batch-delete-auto
+   !emacs -batch -l ~/.vim/elisp/verilog-mode.el %.emacsautotmp -f verilog-batch-delete-auto
    %!cat %.emacsautotmp 
    !rm %.emacsautotmp
 endfunction

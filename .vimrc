@@ -78,6 +78,7 @@ function ExtendedHome()
 endfunction
 noremap <silent> <Home> :call ExtendedHome()<CR>
 inoremap <silent> <Home> <C-O>:call ExtendedHome()<CR>
+noremap <End> g_
 
 " set timeout length faster
 set ttimeoutlen=50
