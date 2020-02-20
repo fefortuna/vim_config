@@ -91,8 +91,9 @@ vmap <C-_>   <Plug>NERDCommenterToggle<CR>gv
 set hidden
 nnoremap <C-D> :bnext<CR>
 nnoremap <C-A> :bprev<CR>
-nnoremap <leader>d :bnext<CR>
-nnoremap <leader>a :bprev<CR>
+" Verilog auto uses these bindings already :<
+"nnoremap <leader>d :bnext<CR>
+"nnoremap <leader>a :bprev<CR>
 
 " allow backspace in normal mode
 nnoremap <BS> X
