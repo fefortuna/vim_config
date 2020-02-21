@@ -26,7 +26,7 @@ set smartindent " Do smart indenting when starting a new line
 set autoindent  " Copy indent from current line, over to the new line
 set expandtab   " Use spaces instead of tabs
 " Set the tab width
-let s:tabwidth=2
+let s:tabwidth=4
 exec 'set tabstop='    .s:tabwidth
 exec 'set shiftwidth=' .s:tabwidth
 exec 'set softtabstop='.s:tabwidth
@@ -106,3 +106,6 @@ set hidden
 nnoremap <C-D> :bnext<CR>
 nnoremap <C-A> :bprev<CR>
 
+"========================================
+" Misc
+"========================================
