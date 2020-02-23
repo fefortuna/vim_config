@@ -19,6 +19,8 @@ set splitbelow
 set pastetoggle=<F3>
 set number
 
+set nowrap
+
 "indentation settings
 " https://stackoverflow.com/questions/14173766/vim-ignores-shiftwidth-specified-in-vimrc
 set shiftround  " Round indent to multiple of 'shiftwidth'
@@ -44,6 +46,7 @@ set ttimeoutlen=50
 set termguicolors
 
 """" enable the theme
+" color scheme from https://github.com/Rigellute/rigel
 syntax enable
 colorscheme rigel
 let g:rigel_lightline = 1
@@ -58,8 +61,15 @@ let g:lightline = { 'colorscheme': 'rigel' }
     "*BufTabLineActive*         |PmenuSel|          Buffer shown in other window
     "*BufTabLineHidden*         |TabLine|           Buffer not currently visible
     "*BufTabLineFill*           |TabLineFill|       Empty area
+"to see the colors of your current color scheme, run
+":so $VIMRUNTIME/syntax/hitest.vim
+"Example of how to link BufTabLine colors to one of your color-scheme colors:
 "hi link BufTabLineCurrent ColorColumn
+"this will make the current buffer tab share the same color as the Color
+"Column syntax highlight group
+
 hi link BufTabLineActive StatusLine
+" Show buffer numbers in the tabline
 let g:buftabline_numbers = 1
 
 "================================================== 
@@ -81,12 +91,14 @@ nnoremap <Up> gk
 nnoremap <Down> gj
 
 " Home goes to beginning of non-whitespace text, useful for indented lines
+" based off modified version of answer from:
 " https://stackoverflow.com/questions/2035800/pressing-home-in-vim-on-an-indented-line 
 function ExtendedHome()
     let column = col('.')
     normal! ^
     if column == col('.')
-        normal! 1
+        let row = line('.')
+        call cursor(row,1)
     endif
 endfunction
 noremap <silent> <Home> :call ExtendedHome()<CR>
