@@ -55,3 +55,9 @@ official vim website [here](https://www.vim.org/git.php)
 [how to use user-installed vim](https://stackoverflow.com/questions/17672259/how-to-use-local-user-installed-version-of-vim-linux/17672393)
 
 Installing plugins: use git submodules as directed [here](https://gist.github.com/manasthakur/d4dc9a610884c60d944a4dd97f0b3560)
+
+You may also want to add this to your bashrc to disable the ctrl+s shortcut that freezes the terminal:
+
+```
+stty -ixon
+```

@@ -1,6 +1,6 @@
 set clipboard=exclude:.*
 " start pathogen plugin manager
-execute pathogen#infect()
+call pathogen#infect()
 
 "================================================== 
 "BASIC SETTINGS
@@ -20,6 +20,7 @@ set pastetoggle=<F3>
 set number
 
 set nowrap
+set autochdir
 
 "indentation settings
 " https://stackoverflow.com/questions/14173766/vim-ignores-shiftwidth-specified-in-vimrc
@@ -44,6 +45,9 @@ set ttimeoutlen=50
 "================================================== 
 """" enable 24bit true color
 set termguicolors
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
 
 """" enable the theme
 " color scheme from https://github.com/Rigellute/rigel
