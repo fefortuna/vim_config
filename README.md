@@ -4,18 +4,18 @@
 
 ```
 cd ~/
-git clone bitbucket.org/mondO/vim.git
+git clone --recursive bitbucket.org/mondO/vim.git
 
 ```
 
-2\. Run setup.sh
+2\. Run setup.sh; this will backup your current .vim and .vimrc to `old_vim`, and also create a symlink to `~/.vim/.vimrc`
 ```
 ./vim/setup.sh
 ```
 
 3\. Rename cloned repository to ~/.vim
 ```
-mv ~/vim ~/.vim
+mv ~/cloned-vim-config ~/.vim
 ```
 
 You may also need to update to vim8- color scheme doesn't work correctly in vim7 for some reason.

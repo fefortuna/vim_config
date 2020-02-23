@@ -17,4 +17,3 @@ fi
 
 ln -sf ~/.vim/.vimrc ~/.vimrc
 
-echo "Old .vim and .vimrc saved in ~/old_vim, please execute 'mv $DIR ~/.vim'"
