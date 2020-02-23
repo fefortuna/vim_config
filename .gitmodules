@@ -46,3 +46,6 @@
 [submodule "bundle/rigel"]
 	path = bundle/rigel
 	url = https://github.com/Rigellute/rigel.git
+[submodule "nerdtree"]
+	path = nerdtree
+	url = https://github.com/preservim/nerdtree
