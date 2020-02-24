@@ -40,15 +40,9 @@
 [submodule "bundle/vim-systemverilog"]
 	path = bundle/vim-systemverilog
 	url = https://github.com/cazador481/vim-systemverilog
-[submodule "bundle/nerdtree"]
-	path = bundle/nerdtree
-	url = https://github.com/preservim/nerdtree
 [submodule "bundle/rigel"]
 	path = bundle/rigel
 	url = https://github.com/Rigellute/rigel.git
-[submodule "nerdtree"]
-	path = nerdtree
-	url = https://github.com/preservim/nerdtree
 [submodule "bundle/vim-fugitive"]
 	path = bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive
@@ -58,6 +52,6 @@
 [submodule "bundle/vim-easy-align"]
 	path = bundle/vim-easy-align
 	url = https://github.com/junegunn/vim-easy-align
-[submodule "bundle/vim-dirvish"]
-	path = bundle/vim-dirvish
-	url = https://github.com/justinmk/vim-dirvish
+[submodule "bundle/vim-filebeagle"]
+	path = bundle/vim-filebeagle
+	url = https://github.com/jeetsukumaran/vim-filebeagle
