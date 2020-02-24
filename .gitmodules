@@ -49,3 +49,6 @@
 [submodule "nerdtree"]
 	path = nerdtree
 	url = https://github.com/preservim/nerdtree
+[submodule "bundle/vim-fugitive"]
+	path = bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive
