@@ -58,3 +58,6 @@
 [submodule "bundle/vim-easy-align"]
 	path = bundle/vim-easy-align
 	url = https://github.com/junegunn/vim-easy-align
+[submodule "bundle/vim-dirvish"]
+	path = bundle/vim-dirvish
+	url = https://github.com/justinmk/vim-dirvish
