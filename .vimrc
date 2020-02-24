@@ -17,9 +17,7 @@ set splitbelow
 
 " diables some annoying stuff when pasting into vim
 set pastetoggle=<F3>
-set number
 
-set nowrap
 set autochdir
 
 "indentation settings
@@ -41,10 +39,14 @@ set ttimeoutlen=50
 "================================================== 
 " APPEARANCE & COLOR SCHEME SETTINGS
 "================================================== 
-" toggle cursorline when entering/leaving insert mode
-:autocmd InsertEnter,InsertLeave * set cul!
 " Lightline shows mode info, so hide the --INSERT-- text on the status line
 set noshowmode
+
+set number
+set nowrap
+
+" toggle cursorline when entering/leaving insert mode
+:autocmd InsertEnter,InsertLeave * set cul!
 
 """" enable 24bit true color
 set termguicolors
