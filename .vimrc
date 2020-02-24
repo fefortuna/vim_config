@@ -110,6 +110,7 @@ nmap <silent> <leader>k :wincmd k<CR>
 nmap <silent> <leader>l :wincmd l<CR>
 
 " Comment current line/selection with <leader>+</>
+let g:NERDCommentEmptyLines = 1
 nmap <silent> <leader>/ <Plug>NERDCommenterToggle
 vmap <silent> <leader>/ <Plug>NERDCommenterToggle
 
