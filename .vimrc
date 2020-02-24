@@ -17,7 +17,7 @@ set splitbelow
 " diables some annoying stuff when pasting into vim
 set pastetoggle=<F3>
 
-set autochdir
+"set autochdir
 
 " get vim working with GUI clipboard
 set clipboard=unnamedplus
@@ -154,3 +154,12 @@ nmap ea <Plug>(EasyAlign)
 
 " Disable gitgutter key mappings
 let g:gitgutter_map_keys = 0
+
+"Dirvish doesn't support autochdir, enable autochdir when you open a file
+"https://github.com/justinmk/vim-dirvish/issues/19
+set noautochdir
+augroup auto_ch_dir
+    autocmd!
+    autocmd BufEnter * silent! lcd %:p:h
+augroup END
+
