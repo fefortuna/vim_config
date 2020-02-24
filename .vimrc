@@ -34,15 +34,18 @@ exec 'set tabstop='    .s:tabwidth
 exec 'set shiftwidth=' .s:tabwidth
 exec 'set softtabstop='.s:tabwidth
 
-" toggle cursorline when entering/leaving insert mode
-:autocmd InsertEnter,InsertLeave * set cul!
 
 " set timeout length faster
 set ttimeoutlen=50
 
 "================================================== 
-" COLOR SCHEME
+" APPEARANCE & COLOR SCHEME SETTINGS
 "================================================== 
+" toggle cursorline when entering/leaving insert mode
+:autocmd InsertEnter,InsertLeave * set cul!
+" Lightline shows mode info, so hide the --INSERT-- text on the status line
+set noshowmode
+
 """" enable 24bit true color
 set termguicolors
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
@@ -54,7 +57,23 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 syntax enable
 colorscheme rigel
 let g:rigel_lightline = 1
-let g:lightline = { 'colorscheme': 'rigel' }
+
+"--------------------
+" Lightline Theming
+"--------------------
+let g:lightline = {
+      \ 'colorscheme': 'rigel',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
+      \   'right': [ [ 'lineinfo' ],
+      \              [ 'percent' ],
+      \              [ 'fileformat', 'fileencoding', 'filetype', 'charvaluehex' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'FugitiveHead'
+      \ },
+      \ }
 
 
 "--------------------
