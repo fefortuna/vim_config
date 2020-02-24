@@ -1,4 +1,3 @@
-set clipboard=exclude:.*
 " start pathogen plugin manager
 call pathogen#infect()
 
@@ -19,6 +18,9 @@ set splitbelow
 set pastetoggle=<F3>
 
 set autochdir
+
+" get vim working with GUI clipboard
+set clipboard=unnamedplus
 
 "indentation settings
 " https://stackoverflow.com/questions/14173766/vim-ignores-shiftwidth-specified-in-vimrc
@@ -131,6 +133,9 @@ inoremap <silent> <Home> <C-O>:call ExtendedHome()<CR>
 
 " Map end key to jump to end of line but before the newline char
 noremap <End> g_
+
+noremap x "_x
+xnoremap X "_X
 
 " move between buffers
 set hidden
