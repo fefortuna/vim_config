@@ -140,5 +140,6 @@ nnoremap <C-A> :bprev<CR>
 "========================================
 " Misc
 "========================================
-"
-"Nothing as of now!
+
+" Disable gitgutter key mappings
+let g:gitgutter_map_keys = 0
