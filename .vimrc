@@ -25,7 +25,6 @@ set clipboard=unnamedplus
 "indentation settings
 " https://stackoverflow.com/questions/14173766/vim-ignores-shiftwidth-specified-in-vimrc
 set shiftround  " Round indent to multiple of 'shiftwidth'
-set smartindent " Do smart indenting when starting a new line
 set autoindent  " Copy indent from current line, over to the new line
 set expandtab   " Use spaces instead of tabs
 " Set the tab width
