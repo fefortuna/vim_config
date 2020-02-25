@@ -52,3 +52,6 @@
 [submodule "bundle/vim-filebeagle"]
 	path = bundle/vim-filebeagle
 	url = https://github.com/jeetsukumaran/vim-filebeagle
+[submodule "bundle/vim-rooter"]
+	path = bundle/vim-rooter
+	url = https://github.com/airblade/vim-rooter

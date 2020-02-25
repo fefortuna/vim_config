@@ -17,7 +17,7 @@ set splitbelow
 " diables some annoying stuff when pasting into vim
 set pastetoggle=<F3>
 
-set autochdir
+"set autochdir
 
 " get vim working with GUI clipboard
 set clipboard=unnamedplus
@@ -97,6 +97,7 @@ let g:lightline = {
 hi link BufTabLineActive StatusLine
 " Show buffer numbers in the tabline
 let g:buftabline_numbers = 1
+let g:buftabline_indicators = 1
 
 "================================================== 
 " KEY MAPPINGS
