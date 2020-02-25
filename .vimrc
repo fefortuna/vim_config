@@ -14,9 +14,6 @@ set mouse=a
 set splitright
 set splitbelow
 
-" diables some annoying stuff when pasting into vim
-set pastetoggle=<F3>
-
 "set autochdir
 
 " get vim working with GUI clipboard
@@ -143,11 +140,23 @@ set hidden
 nnoremap <C-D> :bnext<CR>
 nnoremap <C-A> :bprev<CR>
 
+" diables some annoying stuff when pasting into vim
+set pastetoggle=<F3>
+
 " Easyalign bindings: see https://github.com/junegunn/vim-easy-align
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ea <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ea <Plug>(EasyAlign)
+
+" toggle syntax highlighting with F4- EasyAlign has a bug where whitespace tables
+" don't work if syntax highlighting is turned on
+" https://github.com/junegunn/vim-easy-align/issues/134
+map <F4> :if exists("g:syntax_on") <Bar>              
+	\   syntax off <Bar>                             
+	\ else <Bar>                                     
+	\   syntax enable <Bar>                                  
+	\ endif <CR>                                             
 
 "========================================
 " Misc
@@ -155,3 +164,5 @@ nmap ea <Plug>(EasyAlign)
 
 " Disable gitgutter key mappings
 let g:gitgutter_map_keys = 0
+" Show hidden files in file manager
+let g:filebeagle_show_hidden=1
