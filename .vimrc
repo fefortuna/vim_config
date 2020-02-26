@@ -48,12 +48,11 @@ set nowrap
 
 """" enable 24bit true color
 set termguicolors
-let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 
 """" enable the theme
 " color scheme from https://github.com/Rigellute/rigel
+set background=dark
 syntax enable
 colorscheme rigel
 let g:rigel_lightline = 1
@@ -116,6 +115,10 @@ vmap <silent> <leader>/ <Plug>NERDCommenterToggle
 
 "nmap <silent> <leader>b :wincmd l<CR>
 nnoremap <expr> <leader>s ":e#" . input("Switch to buffer #:") . "\<CR>"
+
+" refresh gitgutter and redraw
+nmap <C-l> :GitGutterAll<CR><C-l>
+inoremap <C-l> <C-O><C-l>
 
 " In normal mode, make up and down keys move over wrapped lines
 nnoremap <Up> gk
