@@ -111,6 +111,9 @@ let g:NERDCommentEmptyLines = 1
 nmap <silent> <leader>/ <Plug>NERDCommenterToggle
 vmap <silent> <leader>/ <Plug>NERDCommenterToggle
 
+"nmap <silent> <leader>b :wincmd l<CR>
+nnoremap <expr> <leader>s ":e#" . input("Switch to buffer #:") . "\<CR>"
+
 " In normal mode, make up and down keys move over wrapped lines
 nnoremap <Up> gk
 nnoremap <Down> gj
