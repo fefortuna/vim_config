@@ -99,12 +99,15 @@ let g:buftabline_indicators = 1
 "================================================== 
 " KEY MAPPINGS
 "================================================== 
-" space + hjkl for window navigation
+" space + hjkl for quick window navigation
 let mapleader = "\<Space>" 
 nmap <silent> <leader>h :wincmd h<CR>
 nmap <silent> <leader>j :wincmd j<CR>
 nmap <silent> <leader>k :wincmd k<CR>
 nmap <silent> <leader>l :wincmd l<CR>
+
+" space + w for miscellaneous window commands
+nmap <silent> <leader>w <C-W>
 
 " Comment current line/selection with <leader>+</>
 let g:NERDCommentEmptyLines = 1
@@ -169,3 +172,4 @@ map <F4> :if exists("g:syntax_on") <Bar>
 let g:gitgutter_map_keys = 0
 " Show hidden files in file manager
 let g:filebeagle_show_hidden=1
+let g:easy_align_ignore_groups=[]
