@@ -14,7 +14,12 @@ set mouse=a
 set splitright
 set splitbelow
 
-"set autochdir
+" diables some annoying stuff when pasting into vim
+set pastetoggle=<F3>
+
+" Keep search results highlighted after pressing enter (press ctrl+l or use :noh to unhighlight)
+" https://superuser.com/questions/345215/vim-how-do-you-efficiently-search-for-text
+set hlsearch
 
 " get vim working with GUI clipboard
 set clipboard=unnamedplus
