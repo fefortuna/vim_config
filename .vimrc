@@ -122,8 +122,7 @@ vmap <silent> <leader>/ <Plug>NERDCommenterToggle
 nnoremap <expr> <leader>s ":e#" . input("Switch to buffer #:") . "\<CR>"
 
 " refresh gitgutter and redraw
-nmap <C-l> :GitGutterAll<CR><C-l>
-inoremap <C-l> <C-O><C-l>
+nmap <silent><leader>g :GitGutterAll<CR><C-l>
 
 " In normal mode, make up and down keys move over wrapped lines
 nnoremap <Up> gk
