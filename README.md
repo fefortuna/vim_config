@@ -17,7 +17,7 @@ git clone --recursive bitbucket.org/mondO/vim.git
 ```
 mv ~/cloned-vim-config ~/.vim
 ```
-
+## Installing Vim 8
 You may also need to update to vim8- color scheme doesn't work correctly in vim7 for some reason.
 
 1\. Clone vim from the link [here](https://superuser.com/questions/162560/how-to-install-vim-on-linux-when-i-dont-have-root-permissions)
