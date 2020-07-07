@@ -55,3 +55,6 @@
 [submodule "bundle/vim-rooter"]
 	path = bundle/vim-rooter
 	url = https://github.com/airblade/vim-rooter
+[submodule "bundle/vim-colors-xcode"]
+	path = bundle/vim-colors-xcode
+	url = https://github.com/arzg/vim-colors-xcode
