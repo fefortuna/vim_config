@@ -1,21 +1,20 @@
 # Instructions
 
-1\. Clone 
+1\. Clone recursively
 
 ```
 cd ~/
-git clone --recursive bitbucket.org/mondO/vim.git
-
+git clone --recursive git@github.com:fefortuna/vim_config.git 
 ```
 
 2\. Run setup.sh; this will backup your current .vim and .vimrc to `old_vim`, and also create a symlink to `~/.vim/.vimrc`
 ```
-./vim/setup.sh
+./vim_config/setup.sh
 ```
 
 3\. Rename cloned repository to ~/.vim
 ```
-mv ~/cloned-vim-config ~/.vim
+mv ~/vim_config ~/.vim
 ```
 ## Installing Vim 8
 You may also need to update to vim8- color scheme doesn't work correctly in vim7 for some reason.
