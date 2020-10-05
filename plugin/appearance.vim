@@ -14,9 +14,9 @@ set nowrap
 " color scheme from https://github.com/Rigellute/rigel
 set background=dark
 syntax enable
-"colorscheme rigel
+colorscheme rigel
 "colorscheme wombat
-colorscheme xcodedark
+"colorscheme xcodedark
 let g:rigel_lightline = 1
 "highlight Normal ctermbg=NONE
 "highlight nonText ctermbg=NONE
@@ -24,7 +24,8 @@ let g:rigel_lightline = 1
 "--------------------
 " Lightline Theming
 "--------------------
-let g:lightline = {
+set laststatus=2
+let g:lightline={
       "\ 'colorscheme': 'rigel',
       "\ 'colorscheme': 'jellybeans',
       \ 'active': {
@@ -62,5 +63,7 @@ let g:buftabline_indicators = 1
 
 " Search Highlight Color
 " https://stackoverflow.com/questions/7103173/vim-how-to-change-the-highlight-color-for-search-hits-and-quickfix-selection
-hi Search cterm=NONE ctermfg=grey ctermbg=blue
+"hi Search cterm=NONE ctermfg=grey ctermbg=blue
 
+" fb: Fix parenthesis highlight color
+hi MatchParen cterm=NONE ctermfg=white ctermbg=darkgrey
