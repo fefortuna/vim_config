@@ -4,7 +4,7 @@
 
 ```
 cd ~/
-git clone --recursive bitbucket.org/mondO/vim.git
+git clone --recursive git@github.com:fefortuna/vim_config.git
 
 ```
 
