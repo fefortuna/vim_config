@@ -27,6 +27,33 @@ set clipboard=unnamedplus
 " set timeout length faster
 set ttimeoutlen=50
 
+" Ignore case when searching, except if upper-case is present
+set ignorecase
+set smartcase
+
+" Keep this many lines above/below the cursor when scrolling
+set scrolloff=3
+
+" display command line's auto-complete as a menu
+set wildmenu
+
+" Fix backspace
+set backspace=indent,eol,start
+
+" Folding
+set foldmethod=indent
+"set foldmethod=syntax
+set foldlevelstart=3
+
+" Show tabs and trailing spaces
+set list
+set listchars=tab:>·
+" set listchars=tab:>·,trail:·
+
+set nofoldenable
+" Set vim-rooter to manual (don't automatically change vim root, use :Rooter to invoke it manually.)
+let g:rooter_manual_only=1
+
 "================================================== 
 "INDENTATION SETTINGS
 "================================================== 
@@ -39,13 +66,6 @@ let s:tabwidth=4
 "exec 'set tabstop='    .s:tabwidth
 exec 'set shiftwidth=' .s:tabwidth
 exec 'set softtabstop='.s:tabwidth
-
-au filetype pb setl ts=2 sw=2 sts=2 et
-au filetype yaml setl ts=2 sw=2 sts=2 et
-au filetype python setl ts=4 sw=4 sts=4 et
-au filetype csr setl ts=2 sw=2 sts=2 et
-au filetype verilog setl ts=8 sw=3 sts=3 et
-au filetype pl setl ts=8 et
 
 "================================================== 
 " APPEARANCE & COLOR SCHEME SETTINGS
