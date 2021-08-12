@@ -56,9 +56,3 @@ runtime appearance.vim
 " KEY MAPPINGS
 "================================================== 
 runtime keymaps.vim
-
-"================================================== 
-" MARVELL-SPECIFIC MAPPINGS AND FUNCTIONS
-"================================================== 
-
-runtime marvell.vim
