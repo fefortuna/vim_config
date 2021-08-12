@@ -14,9 +14,9 @@ set nowrap
 " color scheme from https://github.com/Rigellute/rigel
 set background=dark
 syntax enable
-"colorscheme rigel
+colorscheme rigel
 "colorscheme wombat
-colorscheme xcodedark
+"colorscheme xcodedark
 let g:rigel_lightline = 1
 "highlight Normal ctermbg=NONE
 "highlight nonText ctermbg=NONE
