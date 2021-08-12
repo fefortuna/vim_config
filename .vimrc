@@ -62,7 +62,7 @@ set shiftround  " Round indent to multiple of 'shiftwidth'
 set autoindent  " Copy indent from current line, over to the new line
 set expandtab   " Use spaces instead of tabs
 " Set the tab width
-let s:tabwidth=4
+let s:tabwidth=2
 "exec 'set tabstop='    .s:tabwidth
 exec 'set shiftwidth=' .s:tabwidth
 exec 'set softtabstop='.s:tabwidth
