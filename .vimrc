@@ -41,11 +41,18 @@ set wildmenu
 set backspace=indent,eol,start
 
 " Folding
-set foldmethod=syntax
-"set foldlevelstart=3
+set foldmethod=indent
+"set foldmethod=syntax
+set foldlevelstart=3
+
+" Show tabs and trailing spaces
+set list
+set listchars=tab:>·
+" set listchars=tab:>·,trail:·
+
 set nofoldenable
 " Set vim-rooter to manual (don't automatically change vim root, use :Rooter to invoke it manually.)
-let g:rooter_manual_only=1 
+let g:rooter_manual_only=1
 
 "================================================== 
 "INDENTATION SETTINGS
@@ -55,7 +62,7 @@ set shiftround  " Round indent to multiple of 'shiftwidth'
 set autoindent  " Copy indent from current line, over to the new line
 set expandtab   " Use spaces instead of tabs
 " Set the tab width
-let s:tabwidth=4
+let s:tabwidth=2
 "exec 'set tabstop='    .s:tabwidth
 exec 'set shiftwidth=' .s:tabwidth
 exec 'set softtabstop='.s:tabwidth
@@ -69,5 +76,4 @@ runtime appearance.vim
 " KEY MAPPINGS
 "================================================== 
 runtime keymaps.vim
-
 

@@ -50,6 +50,7 @@ xnoremap X "_X
 set hidden
 nnoremap <C-D> :bnext<CR>
 nnoremap <C-S> :bprev<CR>
+
 " fb: Move between buffers with <leader> m and n
 nmap <silent> <leader>m :bn<CR>
 nmap <silent> <leader>n :bp<CR>
@@ -60,8 +61,6 @@ nnoremap K H
 nnoremap H 0
 nnoremap L $
 nnoremap 0 ^
-
-
 
 " diables some annoying stuff when pasting into vim
 set pastetoggle=<F3>
