@@ -8,6 +8,9 @@ nmap <silent> <leader>j :wincmd j<CR>
 nmap <silent> <leader>k :wincmd k<CR>
 nmap <silent> <leader>l :wincmd l<CR>
 
+" Disable ctrl+a increment, to remove conflict with Tmux
+map <C-a> <Nop>
+
 " space + w for miscellaneous window commands
 nmap <silent> <leader>w <C-W>
 
@@ -54,6 +57,9 @@ nnoremap <C-S> :bprev<CR>
 " fb: Move between buffers with <leader> m and n
 nmap <silent> <leader>m :bn<CR>
 nmap <silent> <leader>n :bp<CR>
+
+" fb: set foldmethod=indent
+nmap <silent> <leader>i :set foldmethod=indent<CR>
 
 " fb: saner capitals
 nnoremap J L
