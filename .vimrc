@@ -8,6 +8,7 @@ syntax on
 filetype plugin indent on
 
 " Enable mouse scroll
+set ttymouse=sgr
 set mouse=a
 
 " open new splits to the right, and on the bottom
