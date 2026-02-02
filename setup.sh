@@ -15,5 +15,5 @@ if [ -f ~/.vimrc ]; then
   mv ~/.vimrc ~/old_vim/
 fi
 
-ln -sf ~/.vim/.vimrc ~/.vimrc
+ln -sf ~/.vim/plugin/vimrc ~/.vimrc
 

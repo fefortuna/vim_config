@@ -1,0 +1,85 @@
+﻿" ============================================================================
+" PLUGIN: PATHOGEN
+" ============================================================================
+" What: Plugin manager that loads plugins from ~/.vim/bundle/
+" How:  Just drop plugins into ~/.vim/bundle/ and Pathogen loads them
+"        ===>> Pathogen MUST be the first thing run by vimrc <<===
+" Repo: https://github.com/tpope/vim-pathogen
+" ============================================================================
+"
+" Disable GitGutter
+let g:pathogen_disabled = ['vim-gitgutter']
+
+" Start Pathogen plugin manager
+call pathogen#infect()
+
+
+" ============================================================================
+" Source configurations
+" ============================================================================
+
+source ~/.vim/plugin/general.vim
+source ~/.vim/plugin/plugins.vim
+
+" ============================================================================
+" Notes and references
+" ============================================================================
+
+" Replace NTH instance of a pattern:
+"   https://stackoverflow.com/questions/3249275/multiple-commands-on-same-line
+"   Syntax: s/\%(\(PATTERN\).\{-}\)\{NTH}\zs\1/REPLACEMENT/
+
+" LEADER KEY MAPPINGS (Space + key):
+"   h/j/k/l  - Navigate windows (left/down/up/right)
+"   w        - Window command prefix
+"   m/n      - Next/previous buffer
+"   s        - Switch to buffer by number
+"   /        - Toggle comment (NERDCommenter)
+"   u        - Remove trailing whitespace
+"   i        - Set fold method to indent
+"
+" BUFFER NAVIGATION:
+"   Ctrl+D   - Next buffer
+"   Ctrl+S   - Previous buffer
+"
+" ENHANCED MOVEMENT:
+"   H        - Start of line
+"   L        - End of line
+"   J        - Bottom of screen
+"   K        - Top of screen
+"   0        - First non-whitespace character
+"   Home     - Toggle between first non-whitespace and column 0
+"   End      - Last character (before newline)
+"
+" SEARCH:
+"   *        - Highlight word under cursor (no jump)
+"   /        - Search with very magic mode (no jump)
+"
+" FUNCTION KEYS:
+"   F3       - Toggle paste mode
+"   F4       - Toggle syntax highlighting
+"
+" FILE BROWSER:
+"   -        - Open FileBeagle file browser
+"
+" PLUGIN SHORTCUTS:
+"   ea       - EasyAlign (visual or motion)
+"
+" ============================================================================
+" BUFTABLINE COLOR REFERENCE
+" ============================================================================
+" To see all colors in your current color scheme, run:
+"   :so $VIMRUNTIME/syntax/hitest.vim
+"
+" Custom highlighting examples:
+"   hi link BufTabLineCurrent ColorColumn
+"   This makes the current buffer tab use ColorColumn's color
+"
+" Available BufTabLine highlight groups:
+"   *BufTabLineCurrent*  - Buffer shown in current window (default: TabLineSel)
+"   *BufTabLineActive*   - Buffer shown in other window (default: PmenuSel)
+"   *BufTabLineHidden*   - Buffer not currently visible (default: TabLine)
+"   *BufTabLineFill*     - Empty area (default: TabLineFill)
+" ============================================================================
+
+
